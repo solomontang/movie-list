@@ -1,0 +1,19 @@
+.movie-list {
+  background: #fff;
+  padding: 8px;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+.movie-list-entry {
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+}
+.movie-list-entry:hover {
+  background:lightgray;
+}
+
+.movie-list-entry-title {
+  font-weight: bold;
+}
