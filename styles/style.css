@@ -1,5 +1,7 @@
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
-
+input::-webkit-input-placeholder {
+  transition: color 0.3s;
+}
 input:focus::-webkit-input-placeholder {
   color:transparent;
 }
@@ -20,11 +22,11 @@ input:focus::-webkit-input-placeholder {
     text-indent: 20px;
     -webkit-transition: all 0.2s;
     -moz-transition: all 2s;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 .search-bar .form-control:focus {
     background-position: -20px center;
-    text-indent: 0;
+    text-indent: 10px;
 }
 
 /*.search-bar .btn {
