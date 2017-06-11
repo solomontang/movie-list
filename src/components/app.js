@@ -1,8 +1,8 @@
 angular.module('movie-list')
 .controller('AppCtrl', function () {
-  this.movies = movieData;
+  this.movies = [];
 
-  this.filterMovies = (input) => {
+  this.filterMovies = (input, callback) => {
     this.movies = movieData;
     this.movies = this.movies.filter( (movie) => {
       var title = movie.title.toLowerCase();

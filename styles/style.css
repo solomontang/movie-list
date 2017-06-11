@@ -33,6 +33,7 @@ input:focus::-webkit-input-placeholder {
 .add-bar .form-control{
   width: 80%;
 }
+
 .btn {
   border-radius: 1px;
   border-color: #d3d3d3;
@@ -43,11 +44,9 @@ input:focus::-webkit-input-placeholder {
 }
 
 .btn:hover {
-
   border-color: #c6c6c6;
   background: #f0f0f0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.10);
-
 }
 
 .movie-list {
@@ -67,6 +66,13 @@ input:focus::-webkit-input-placeholder {
   background: lightgrey;
 }
 
-.movie-list-entry-title {
-  font-weight: bold;
+.watched {
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  float: right;
+  height: 22px;
 }
