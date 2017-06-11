@@ -1,8 +1,5 @@
 <div class="search-bar form-inline">
-  <form ng-submit="$ctrl.handleSubmit(input || '')">
-    <input class="form-control" type="text" ng-model="input" placeholder="Search..."/>
-    <button class="btn">
-  </form>
-    <span class="glyphicon glyphicon-search"></span>
+    <input class="form-control" type="text" ng-model="input" placeholder="Search..." ng-keyup="$ctrl.handleSubmit(input)"/>
+    <!-- <span class="glyphicon glyphicon-search"></span> -->
   </button>
 </div>
