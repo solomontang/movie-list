@@ -2,7 +2,7 @@ angular.module('movie-list')
 
 .component('search', {
   bindings: {
-    handleSubmit: '<'
+    handleSearch: '<'
   },
   templateUrl: 'src/templates/search.html'
 });

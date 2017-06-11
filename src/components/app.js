@@ -9,6 +9,13 @@ angular.module('movie-list')
       return title.includes(input.toLowerCase());
     });
   };
+
+  this.addMovie = (input) => {
+    console.log(input);
+    if (input !== undefined || input !== '') {
+      this.movies.push({title: input});
+    }
+  }
 })
 .component('app', {
   controller: 'AppCtrl',
