@@ -1,7 +1,8 @@
 angular.module('movie-list')
 .component('movieList', {
   bindings: {
-    movies: '<'
+    movies: '<',
+    filteredMovies: '<'
   },
   templateUrl: 'src/templates/movieList.html'
 });

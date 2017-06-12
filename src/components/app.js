@@ -6,18 +6,18 @@ var hasTitle = (movie, input) => {
 angular.module('movie-list')
 .controller('AppCtrl', function () {
   this.movies = [];
-  this.filteredMovies = this.movies;
+  this.filteredMovies = [];
   this.query = '';
 
   this.filterMovies = (input) => {
-    this.filteredMovies = this.movies.filter( (movie) => hasTitle(movie, input) );
-    return this.filteredMovies;
+    this.filteredMovies = this.movies.map( (movie) => hasTitle(movie, input) );
   };
 
   this.addMovie = (input) => {
     if (input !== undefined || input !== '') {
-      this.movies.push({title: input});
-      this.filteredMovies = this.filterMovies(this.query);
+      var newMovie = {title: input};
+      this.movies.push(newMovie);
+      this.filteredMovies[this.movies.length - 1] = hasTitle(newMovie, this.query);
     }
   }
 })
