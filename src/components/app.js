@@ -21,7 +21,7 @@ angular.module('movie-list')
 
   this.addMovie = (input) => {
     if (input !== undefined || input !== '') {
-      var newMovie = {title: input};
+      var newMovie = {title: input, watched: false};
       this.movies.push(newMovie);
       this.filteredMovies[this.movies.length - 1] = hasTitle(newMovie, this.query);
       this.movieCount = countMovies(this.filteredMovies);

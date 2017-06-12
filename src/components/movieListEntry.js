@@ -1,9 +1,8 @@
 angular.module('movie-list')
 .controller('MovieListEntryCtrl', function () {
-  this.watched = true;
 
   this.toggleWatched = () => {
-    this.watched = !this.watched;
+    this.movie.watched = !this.movie.watched;
   }
 })
 .component('movieListEntry', {
