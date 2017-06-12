@@ -1,14 +1,16 @@
+var hasTitle = (movie, input) => {
+  var title = movie.title.toLowerCase();
+  return title.includes(input.toLowerCase());
+}
+
 angular.module('movie-list')
 .controller('AppCtrl', function () {
   this.movies = [];
   this.filteredMovies = this.movies;
   this.query = '';
 
-  this.filterMovies = (input, callback) => {
-    this.filteredMovies = this.movies.filter( (movie) => {
-      var title = movie.title.toLowerCase();
-      return title.includes(input.toLowerCase());
-    });
+  this.filterMovies = (input) => {
+    this.filteredMovies = this.movies.filter( (movie) => hasTitle(movie, input) );
     return this.filteredMovies;
   };
 
