@@ -1,10 +1,12 @@
 <div id="app container-fluid">
   <div class="col-md-6 col-md-offset-3">
     <h1><center>My Movie List</center></h1>
-    <nav class="navbar">
       <search query="$ctrl.query" movies="$ctrl.movies" handle-search="$ctrl.filterMovies"><h5><em>search</em> component goes here</h5></search>
       <add-movie handle-submit="$ctrl.addMovie"></add-movie>
-    </nav>
+      <div>
+        <button class="btn tab" ng-click="$ctrl.watch = !$ctrl.watch">Watched</button>
+        <button class="btn tab" ng-click="$ctrl.toWatch = !$ctrl.toWatch">To Watch</button>
+      </div>
     <movie-list movies="$ctrl.movies" filtered-movies="$ctrl.filteredMovies" movie-count="$ctrl.movieCount">No movie list</movie-list>
   </div>
 </div>
